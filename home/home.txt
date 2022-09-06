@@ -1,0 +1,15 @@
+total 68
+drwxr-xr-x 2 roukaya roukaya  4096 Sep  5 11:17 Videos
+drwxr-xr-x 2 roukaya roukaya  4096 Sep  5 11:17 Templates
+drwxr-xr-x 2 roukaya roukaya  4096 Sep  5 11:17 Public
+drwxr-xr-x 2 roukaya roukaya  4096 Sep  5 11:17 Music
+drwxr-xr-x 2 roukaya roukaya  4096 Sep  5 11:17 Documents
+drwxr-xr-x 2 roukaya roukaya  4096 Sep  5 11:17 Desktop
+drwxr-xr-x 3 roukaya roukaya  4096 Sep  5 23:09 Pictures
+drwxrwxr-x 2 roukaya roukaya  4096 Sep  6 14:24 help
+-rw-rw-r-- 1 roukaya roukaya    64 Sep  6 15:46 main.c
+-rwxrwxr-x 1 roukaya roukaya 15952 Sep  6 15:47 main
+drwx------ 7 roukaya roukaya  4096 Sep  6 18:02 snap
+drwxr-xr-x 2 roukaya roukaya  4096 Sep  6 18:02 Downloads
+drwxrwxr-x 3 roukaya roukaya  4096 Sep  6 18:13 Roukaya
+drwxrwxr-x 2 roukaya roukaya  4096 Sep  6 18:25 week1
