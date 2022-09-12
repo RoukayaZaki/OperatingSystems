@@ -1,2 +1,2 @@
-g++ ex6.c -o ex6
+gcc ex6.c -o ex6
 ./ex6
