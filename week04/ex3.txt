@@ -1,0 +1,9 @@
+In the first experiment with n = 3, the pstree branched 3 times. At first, it was only the main
+ process. Every 5 seconds, the tree grew a level till it reached 3rd level with 8 processes in total, then, it disappeared.
+
+In the second experiment with n = 5, the pstree branched 5 times.
+Every 5 seconds, the tree grew a level till it reached 5th level, then, it disappeared.
+
+In both experiments, the pstree simulated a binary tree with depth = n. Therefore, the number of processes = 2^n.
+
+P.S. In the second experiment, I interpreted "Run the program so that it would call fork() 5 times." as letting n = 5 as there is no n such that 2^n = 5.
