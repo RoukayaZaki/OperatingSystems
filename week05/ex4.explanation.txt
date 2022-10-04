@@ -1,0 +1,10 @@
+The time consumed in ex3 and ex4 are approximately the same but there is a small difference for
+cases where number of threads > 1. ex4 can be more efficient than ex3 as in ex4 the distribution
+is more balanced than ex3. In ex3, the first thread working on the  first interval would work on
+the first small numbers while the last one would work on the largest numbers which will take more
+time to deal with. However, the distribution in ex4 is more fair as all thread work together on the
+interval as a whole. 
+
+Exception in last run:
+Time in ex3 < ex4. This happened because in ex4 there is a queue of other threads will be waiting
+for the lock to be unlocked and take their turn.
