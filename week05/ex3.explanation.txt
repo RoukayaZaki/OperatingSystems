@@ -1,0 +1,9 @@
+In the first run with n = 10,000,000 and m = 1;
+we have only 1 thread to calculate number of primes in [0, 10000000)
+thus, the time complexity is O(n*sqrt(n)) which took approximately 12s.
+
+In the following runs,
+the time taken to calculate the result is theoretically supposed to be the time of the 
+first run / number of threads due to concucurrency provided by the creation of threads until 
+the number of threads passes a certain threshold and thread creation overhead exceeds the time
+compensated.
