@@ -27,45 +27,50 @@ int main() {
         }
     }
 
-    int cur_time = 0;
-    int have_unfinished_processes = 1;
-    int temp_bt[n_processes];
+    int t_current = 0, p_unfinished = 1, temp_bt[n_processes];
+
     for (int i = 0; i < n_processes; i++) {
         temp_bt[i] = bt[i];
     }
-    while(have_unfinished_processes) {
 
-        have_unfinished_processes = 0;
+    while(p_unfinished) {
+
+        p_unfinished = 0;
 
         for (int i = 0; i < n_processes; i++) {
             if (done[i]) {
                 continue;
             }
-            iter[i] = iter[i] + 1;
-            cur_time = max(cur_time, at[i]);
+            iter[i]++;
+            if(t_current < at[i]) t_current = at[i];
 
-            ct[i] = min(temp_bt[i], quantum) + cur_time;
+            int taken = temp_bt[i];
+            if(quantum < taken) taken = quantum;
+            ct[i] = taken + t_current;
             tat[i] = ct[i] - at[i];
-            wt[i] = tat[i] - min(temp_bt[i], quantum);
+            wt[i] = tat[i] - taken;
+
             if (iter[i] > 1) {
                 wt[i] = wt[i] - quantum * (iter[i] - 1);
             }
 
-            temp_bt[i] = temp_bt[i] - min(temp_bt[i], quantum);
+            temp_bt[i] = temp_bt[i] - taken;
+
             if (temp_bt[i] == 0) {
                 done[i] = 1;
             }
-            cur_time = ct[i];
+
+            t_current = ct[i];
         }
         for (int i = 0; i < n_processes; i++) {
             if (done[i] == 0) {
-                have_unfinished_processes = 1;
+                p_unfinished = 1;
+                break;
             }
         }
 
     }
 
-    // Average TAT, WT
     double t_tat = 0, t_wt = 0;
     for (int i = 0; i < n_processes; i++) {
         t_tat += tat[i];
@@ -74,7 +79,6 @@ int main() {
     avg_tat = t_tat / n_processes;
     avg_wt = t_wt / n_processes;
 
-    // output
     printf("P#\tAT\tBT\tCT\tTAT\tWT\n");
     for (int i = 0; i < n_processes; i++) {
         printf("P%d\t%d\t%d\t%d\t%d\t%d\n", pid[i], at[i], bt[i], ct[i], tat[i], wt[i]);
