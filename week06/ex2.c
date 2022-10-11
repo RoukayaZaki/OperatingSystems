@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h>
 
 void swap(int *first, int *second)
 {
@@ -12,7 +12,7 @@ int main() {
     scanf("%d", &n_processes);
 
     int at[n_processes], bt[n_processes], ct[n_processes], tat[n_processes], wt[n_processes], pid[n_processes]; 
-        double avg_tat, avg_wt;
+    double avg_tat, avg_wt;
 
 
     for (int i = 0; i < n_processes; i++) {
