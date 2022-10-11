@@ -1,6 +1,11 @@
-#include "stdio.h"
-#define max(a,b) (a < b ? b : a)
-#define min(a,b) (a > b ? b : a)
+#include <stdio.h>
+
+void swap(int *first, int *second)
+{
+    int temp = *first;
+    *first = *second;
+    *second = temp;
+}
 
 int main() {
 
