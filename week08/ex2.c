@@ -7,8 +7,9 @@ isn't full and therefore didn't use swaps.
 */
 /*
 ex3
+The memory used by the program inceased every 2-3 seconds.
 The number of processes decrease by 1 after the program is finished.
-The memory used decreases each second and after the program is
+The memory available decreases each second and after the program is
 finished it increases again.
 */
 #include <stdio.h>

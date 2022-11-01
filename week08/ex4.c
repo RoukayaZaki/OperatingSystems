@@ -11,14 +11,10 @@ int main()
 
 	size_t size = 0;
 	struct rusage usage;
-	char *div = "----------------------------------------------------------"
-				"---------------------------------------------------------";
+	char *line = "------------------------";
 
-	printf("%s\n", div);
-	printf("| User CPU time (usec) | System CPU time (usec) | Page faults"
-		   " (w/o I/O) | Page faults (w/ I/O) | Context switches |\n");
-	printf("%s\n", div);
-	for(int i=0; i<10; i++)
+	printf("%s\n|          Memory Usage|\n%s\n", line, line);
+	for(int i = 0; i < 10; i++)
 	{
 		size += 10 * MB;
 		data[i] = malloc(size);
@@ -32,17 +28,13 @@ int main()
 		memset(data[i], 0, size);
 		
 		getrusage(RUSAGE_SELF, &usage);
-		printf("| %20ld | %22ld | %21ld | %20ld | %16ld |\n",
-			usage.ru_utime.tv_usec,
-			usage.ru_stime.tv_usec,
-			usage.ru_minflt,
-			usage.ru_majflt,
-			usage.ru_nvcsw + usage.ru_nivcsw
-		);
+
+		printf("| %20ld |\n", usage.ru_maxrss);
 		
 		sleep(1);
 	}
-	printf("%s\n", div);
+    
+	printf("%s\n", line);
 
     for(int i = 0; i < 10; i++)
 	    free(data[i]);
