@@ -1,0 +1,19 @@
+5 page frames:
+
+Sequence with high hit/miss ratio:
+1 1 1 1 1 1 1 1 1 1
+	Hits: 9, Misses: 1
+	Hits/Misses = 9.00000
+
+Pages that have been recently used would likely be in the page table, that makes accessing them repeatedly 
+most likely causes hits.
+
+Sequence with low hit/miss ratio:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+	Hits: 0, Misses: 30
+    Hits/Misses = 0.000000
+
+Pages that are accessed at more distant intervals than the number of page frames will most likely not be in 
+the page table, resulting in a miss.
+
+This results from the principle of time locality.

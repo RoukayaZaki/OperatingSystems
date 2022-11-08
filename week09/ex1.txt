@@ -1,0 +1,11 @@
+10 page frames:
+Hits: 10, Misses: 990
+Hits/Misses = 0.010101
+
+50 page frames:
+Hits: 51, Misses: 949
+Hits/Misses = 0.053741
+
+100 page frames:
+Hits: 95, Misses: 905
+Hits/Misses = 0.104972
