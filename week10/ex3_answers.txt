@@ -1,0 +1,34 @@
+The number specified for the permission is in octal, and the individual bits correspond to the rwx permission for each user type.
+For example:
+          rwx
+    - 0 = 000   -> means no permissions (can't read/write/execute)
+    - 7 = 111   -> means have all permissions (can read/write/execute)
+    - 5 = 101   -> means have permission to read and execute only (can't write)
+
+For each file/directory you can change the permissions using an octal number of 3 digits, where each digit represents the rwx permissions 
+for user(owner), group, and others, respectively.
+
+	
+- What does 660 mean for ex3.txt?
+	 u   g   o
+     6   6   0
+	110 110 000
+	rw- rw- ---
+
+	User(owner) and group have permission to read and write only (can't execute), and others don't have any permission (can't read/write/execute).
+
+– What does 775 mean for ex3.txt?
+	 u   g   o
+     7   7   5
+	111 111 101
+	rwx rwx r-x
+	
+	User(owner) and group have all permissions (can read/write/execute), others have permission to read and execute only (can't write).
+
+– What does 777 mean for ex3.txt?
+	 u   g   o
+     7   7   7
+	111 111 111
+	rwx rwx rwx
+
+    All (user(owner), group, and others) have all permissions (can read/write/execute).
