@@ -1,7 +1,7 @@
 ../week01/file.txt
 ../week10/_ex2.txt
 
-
+Before removing _ex2.txt using link path:
 _ex1_1.txt
 _ex1_2.txt
 ex1.sh
@@ -15,9 +15,10 @@ ex3.sh
 _ex3.txt
 ex3.txt
 ex4.c
-test.c
+ex4.sh
+ex4.txt
 
-
+After removing _ex2.txt using link path:
 _ex1_1.txt
 _ex1_2.txt
 ex1.sh
@@ -30,4 +31,5 @@ ex3.sh
 _ex3.txt
 ex3.txt
 ex4.c
-test.c
+ex4.sh
+ex4.txt
