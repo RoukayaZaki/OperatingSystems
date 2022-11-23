@@ -1,13 +1,13 @@
 chroot
--> .
--> usr
--> ..
--> file1
--> lib64
--> lib
--> file2
--> bin
 -> ex2.out
+-> .
+-> file2
+-> lost+found
+-> lib
+-> file1
+-> bin
+-> lib64
+-> ..
 actual root
 -> .
 -> lost+found
@@ -18,6 +18,7 @@ actual root
 -> var
 -> ..
 -> libx32
+-> file1
 -> opt
 -> etc
 -> cdrom
@@ -28,9 +29,11 @@ actual root
 -> boot
 -> lib
 -> srv
+-> file2
 -> lib32
 -> dev
 -> bin
+-> ex2.out
 -> tmp
 -> sys
 -> root

@@ -4,4 +4,5 @@ mkfs.ext4 ./lofs.img
 sudo losetup -fP lofs.img
 losetup -a
 mkdir lofsdisk
-sudo mount -a loop /dev/loop24 ./lofsdisk
+loopPath=$(losetup | grep "lofs" | awk '{print $1}')
+sudo mount -o loop $loopPath ./lofsdisk
